@@ -1,5 +1,7 @@
 # MBHS Developers Club Home Page
 
+Visit the website at, https://mbhs-devclub.github.io/home/. 
+
 ### Current TODO
 - [X] Publish to GitHub Pages
 - [x] Fix URL
