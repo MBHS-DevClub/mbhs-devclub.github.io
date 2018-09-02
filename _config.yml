@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: "/home"
-url: "MBHS-DevClub.github.io"
+url: ""
 title: MBHS Dev Club # site's title
 description: "A website with blog posts and pages" # used by search engines
 
