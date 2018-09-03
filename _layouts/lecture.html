@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% if page.title %}
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1> {{page.title}} <h1>
+
+    {% if page.subtitle %}
+    <h2 class="subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+  </div>
+{% endif %}
+
+
+
+
+<div class="posts">
+    {% for post in site.portfolio %}
+    <div class="post-teaser">
+      {% if post.thumbnail %} 
+      <div class="post-img">
+         <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+      </div>
+      {% endif %}
+      <span>
+          <header>
+            <h1>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h1>
+            <p class="meta">
+              {{ post.date | date: "%B %-d, %Y" }}
+            </p>
+          </header>
+          <div class="excerpt">
+              {{ post.excerpt | strip_html | escape }}
+            <!--{{ post.content | strip_html | truncate: "250" }}-->
+            <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
+              {{ site.theme_settings.str_continue_reading }}
+            </a>-->
+          </div>
+      </span>
+    </div> 
+    {% endfor %}
+  </div>
