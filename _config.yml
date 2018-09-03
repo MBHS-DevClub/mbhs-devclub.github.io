@@ -22,14 +22,14 @@ theme_settings:
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: mbhsdevclub@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
   dribbble:
   facebook:
   flickr:
   gitlab:
-  github: "sylhare"
+  github: "MBHS-DevClub"
   google_plus:
   instagram:
   keybase:
@@ -102,6 +102,12 @@ paginate_path: "blog/page:num"
 # PORTFOLIO
 collections:
   portfolio:
+    output: true # creates a rendered page
+    permalink: /:collection/:name
+  lectures:
+    output: true
+    permalink: /:collection/:name
+  team_members: 
     output: true
     permalink: /:collection/:name
 
