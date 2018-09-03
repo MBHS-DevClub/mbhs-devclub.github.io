@@ -6,7 +6,7 @@ permalink: /lectures/
 {% for post in site.posts %}
 <article>
   <h2>
-    <a href="{{ post.url }}">
+    <a href="/home{{ post.url }}">
       {{ post.title }}
     </a>
   </h2>
