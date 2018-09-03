@@ -1,5 +1,5 @@
 ---
-layout: lecture
+layout: lecture_feed
 title: Lectures
 subtitle: Fun Times
 permalink: /lectures/
