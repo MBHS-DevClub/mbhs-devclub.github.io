@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Email Sign Up
 permalink: /email_signup/
 ---
 
