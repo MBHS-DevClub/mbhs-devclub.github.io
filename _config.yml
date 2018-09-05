@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "/"
-url: "mbhs-devclub.github.io"
+baseurl: ""
+url: "mbhs-devclub.github.io/"
 title: MBHS Dev Club # site's title
 description: "A website with blog posts and pages" # used by search engines
 
@@ -107,7 +107,7 @@ collections:
   lectures:
     output: true
     permalink: /:collection/:name
-  team_members: 
+  team_members:
     output: true
     permalink: /:collection/:name
 
