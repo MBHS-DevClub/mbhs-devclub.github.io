@@ -2,12 +2,14 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/generic.jpg"
 tags: [About, Archive]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+**Montgomery Blair's Developers Club has a single goal: to spur interest among Blair students to develop digital applications.**
 
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
+Blair needs resources for learning practical development skills. While there are classes and clubs for learning theory in the abstract, there are few options for students looking to implement that knowledge into real world projects. This leaves students empty handed, with knowledge but nothing to do with it.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+Our club aims to bridge this gap by guiding students to apply knowledge in designing and creating projects. We want to introduce a hands-on approach that puts the emphasis on real world application. This year, our curriculum is designed to teach students artificial intelligence. It will be divided into three stages: basic development skills, background on artificial intelligence, and ultimately, guided implementation.
+
+Through this curriculum, we hope to inspire students to pursue development, and to provide them the skills necessary for success.

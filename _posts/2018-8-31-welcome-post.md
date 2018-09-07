@@ -1,8 +1,54 @@
 ---
 layout: post
-title: "Markup: Syntax Highlighting"
-tags: [code]
+title: Welcome
+tags: [Markdown]
+excerpt_separator: <!--more-->
 ---
+* TOC
+{:toc}
+
+# Welcome to A Lecture
+
+Well this is not really a lecture. More of an intro to how the lectures on the site work; they use Markdown. Well... Kramdown converts the Markdown *actually never mind*.
+
+Markdown let's us do all this:
+
+
+Jekyll supports the use of [Markdown](http://daringfireball.net/projects/markdown/syntax) with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.
+
+Tables have also been extended from Markdown:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+Here's an example of an image, which is included using Markdown:
+
+![Image of a glass on a book]({{ site.baseurl }}/assets/img/pexels/book-glass.jpeg)
+
+Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.
+
+{% highlight js %}
+// count to ten
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// count to twenty
+var j = 0;
+while (j < 20) {
+    j++;
+    console.log(j);
+}
+{% endhighlight %}
+
+Type on Strap uses KaTeX to display maths. Equations such as $$S_n = a \times \frac{1-r^n}{1-r}$$ can be displayed inline.
+
+Alternatively, they can be shown on a new line:
+
+$$ f(x) = \int \frac{2x^2+4x+6}{x-2} $$
+
 
 From Michael's Rose [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting).
 Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. [Highlighting](http://en.wikipedia.org/wiki/Syntax_highlighting) does not affect the meaning of the text itself; it is intended only for human readers.
@@ -10,7 +56,7 @@ Syntax highlighting is a feature that displays source code, in different colors 
 
 ### GFM Code Blocks
 
-GitHub Flavored Markdown [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) are supported. To modify styling and highlight colors edit `/_sass/syntax.scss`.
+GitHub Flavored Markdown [fenced code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) are supported.
 
 ```css
 #container {
@@ -75,7 +121,7 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
    print_hi('Tom')
    #=> prints 'Hi, Tom' to STDOUT.
    ```
-        
+
 3. Now you can do this.
 
 ### GitHub Gist Embed
@@ -83,6 +129,3 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
 An example of a Gist embed below.
 
 <script src="https://gist.github.com/mmistakes/77c68fbb07731a456805a7b473f47841.js"></script>
-
-### Source
-
