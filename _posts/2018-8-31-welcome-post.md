@@ -5,10 +5,6 @@ tags: [Markdown]
 excerpt_separator: <!--more-->
 ---
 
-`Full disclosure: the following text was not written by any of the members of MBHS Developers Club. This is a collection of guides provided by Syllhare on Markdown in this theme.`
-
-**For more information visit [here](https://github.com/Sylhare/Type-on-Strap/).**
-
 * TOC
 {:toc}
 
@@ -134,3 +130,7 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
 An example of a Gist embed below.
 
 <script src="https://gist.github.com/mmistakes/77c68fbb07731a456805a7b473f47841.js"></script>
+
+`Full disclosure: the following text was not written by any of the members of MBHS Developers Club. This is a collection of guides provided by Syllhare on Markdown in this theme.`
+
+**For more information visit [here](https://github.com/Sylhare/Type-on-Strap/).**
