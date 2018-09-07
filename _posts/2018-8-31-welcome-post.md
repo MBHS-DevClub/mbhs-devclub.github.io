@@ -4,6 +4,9 @@ title: Welcome
 tags: [Markdown]
 excerpt_separator: <!--more-->
 ---
+
+`Full disclosure: the following text was not written by any of the members of MBHS Developers Club. This is a collection of guides provided by Syllhare on Markdown in this theme.`
+
 * TOC
 {:toc}
 
