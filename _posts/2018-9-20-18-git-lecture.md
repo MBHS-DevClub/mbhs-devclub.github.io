@@ -319,6 +319,6 @@ git remote add origin https://github.com/MBHS-DevClub/git-example.git
 git push -u origin master
 ```
 
-This uses the HTTPS protocal to setup the repo but you can also use the SSH protocal if you have a key setup on your device. The last option is to open your project directly in GitHub desktop, or if you use GitHubKraken you can clone your project into a directory of your choosing.
+This uses the HTTPS protocal to setup the repo but you can also use the SSH protocal if you have a key setup on your device. The last option is to open your project directly in GitHub desktop, or if you use GitKraken you can clone your project into a directory of your choosing.
 
 *If this is your first time using git you may be asked to add a username or email to connect your git client with your online repo.*
