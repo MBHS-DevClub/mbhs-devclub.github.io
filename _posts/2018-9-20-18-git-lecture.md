@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Introduction to Git & GitHub
-tags: [Git, GitHub, GitKraken]
+tags: [git, GitHub, GitKraken]
 excerpt_separator: <!--more-->
 ---
-
 # Version Control: Staying Gucci
 
 ## Version Control Systems
@@ -21,11 +20,9 @@ Version Control Systems are systems that record changes to a file or set of file
 
 Classifications include:
 
-```markdown
-Local VCS | Centralized VCS | Distributed VCS
-:--------:|:---------------:|:---------------:
-![Local VCS](https://git-scm.com/book/en/v2/images/local.png) | ![Centralized VCS](https://git-scm.com/book/en/v2/images/centralized.png) | ![Distributed VCS] (https://git-scm.com/book/en/v2/images/distributed.png)
-```
+| Local VCS                                                    | Centralized VSC                                              | Distributed VCS                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Local VCS](https://git-scm.com/book/en/v2/images/local.png) | ![Centralized VCS](https://git-scm.com/book/en/v2/images/centralized.png) | ![Distributed VCS](https://git-scm.com/book/en/v2/images/distributed.png) |
 
 #### Examples of Version Control Systems
 
@@ -79,25 +76,33 @@ Creating a repository:
 
 1. Go to your directory:
 
-   `$ cd /c/user/my_project`
+   ```bash
+   $ cd /c/user/my_project
+   ```
 
 2. Initialize your repository:
 
-   `$ git init`
+   ```bash
+   $ git init
+   ```
 
 3. Commit your current file system:
 
-   `$ git add *.c`
+   ```bash
+   $ git add *.c
 
-   `$ git add LICENSE`
+   $ git add LICENSE
 
-   ``$ git commit -m 'initial project version'`
-
-
+   $ git commit -m 'initial project version
+   ```
 
 Cloning a repository:
 
-`git clone <url> [name]`
+```bash
+git clone <url> [name]
+```
+
+
 
 #### File lifecycle
 
@@ -107,23 +112,28 @@ Cloning a repository:
 
 To check the status of your directory in terms of the repository, use: `$ git status`. There are a few possible responses:
 
-`On branch master
+```bash
+On branch master
 Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean`
+nothing to commit, working directory clean
+```
 
 OR:
 
-`$ git status
+```bash
+$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
     README
-nothing added to commit but untracked files present (use "git add" to track)`
+nothing added to commit but untracked files present (use "git add" to track)
+```
 
 OR:
 
-`$ git status
+```bash
+$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
@@ -132,11 +142,13 @@ Changes to be committed:
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
-    modified:   CONTRIBUTING.md`
+    modified:   CONTRIBUTING.md
+```
 
 Here, you can see GitHub has told us of two distinct commands that can modify the staging area. Note: When you change a file, the “Snapshot” that is staged will not modify, this can lead to tricky scenarios like:
 
-`$ git status
+```bash
+$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
@@ -146,7 +158,8 @@ Changes to be committed:
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
-    modified:   CONTRIBUTING.md`
+    modified:   CONTRIBUTING.md
+```
 
 If you want to feel fancy and smart, try `$ git status -s`. This will shorten status text.
 
@@ -154,23 +167,31 @@ If you want to feel fancy and smart, try `$ git status -s`. This will shorten st
 
 Checking differences between your current branch and staged files is really easy. Try `$ git diff`. Or `$ git diff --staged`. Example output is:
 
-`$ git diff --staged
+```bash
+$ git diff --staged
 diff --git a/README b/README
 new file mode 100644
 index 0000000..03902a1
 --- /dev/null
 +++ b/README
 @@ -0,0 +1 @@
-+My Project`
++My Project
+```
+
+
 
 #### Committing your changes
 
 To commit changes, simply use the `$ git commit -m <title of commit>` command:
 
-`$ git commit -m "Story 182: Fix benchmarks for speed"
+```bash
+$ git commit -m "Story 182: Fix benchmarks for speed"
 [master 463dc4f] Story 182: Fix benchmarks for speed
  2 files changed, 2 insertions(+)
- create mode 100644 README`
+ create mode 100644 README
+```
+
+
 
 #### Removing files
 
@@ -216,8 +237,6 @@ The final merge automatically takes in changes when they don’t conflict, but r
 
 ![Delete away!](https://git-scm.com/book/en/v2/images/basic-merging-2.png)
 
-#### Rebasing
-
 A lesser-known — but just as useful — tool in git is called rebasing. Say you’re working on a long-term addition when someone on your team issues a hotfix, updating the master branch. You could do a three-way merge, but the other option is to re-base (it makes a lot of sense when you split it into two words!) your feature onto the new master commit.
 
 ![The feature moves to the new base](https://i1.wp.com/benmarshall.me/wp-content/uploads/2013/11/git-rebasing-example.png?w=440&ssl=1)
@@ -228,87 +247,85 @@ This can save the time of manually resolving conflicts in a three-way merge, esp
 
 #### Why GitHub?
 
-Although there are many alternative Git web-hosting services — such as Bitbucket and Gitlab —  GitHub is by far the most popular and we recommend it. Aside from having the largest user base and being open source, the most import reason we use GitHub is the student pack.
+Although there are many alternative git web-hosting services, such as Bitbucket and Gitlab, GitHub is by far the most popular, and we recommend it. Aside from having the largest user base and being open-source, the most import reason we choose GitHub is the student pack.
 
 #### What's the student pack?
 
-Access to some of the best editors, hosting platforms, all the features of GitHub premium, and much more. To get it, create an account and apply for the student pack.
+The student pack grants free access to some of the best editors, hosting platforms, all the features of GitHub premium, and much more. To get it, create an account and apply for the student pack.
 
-#### Git GUI Clients
+#### Git GUI clients
 
-Alright you've conquered the basic git commands, what now? Choose a GUI client. This is purely optional though, on balance, Git GUI Clients are faster and easier to use for beginners. There are some times when you will need to use Git in the command line interface, but you can get away with using the GUI Client most of the time. We have two favorites at Dev Club.
+Alright: You've now conquered the basic git commands, so what now? Choose a GUI client. This is purely optional though. On balance, git GUI Clients are faster and easier to use for beginners. There are some times when you will need to use git in the command line interface, but you can usually get away with using the GUI Client. We have two favorites at Dev Club:
 
-First, the classic, Github Desktop:
+First, the classic, Github Desktop.
 
 ![Github Desktop Logo](https://assets-cdn.github.com/images/modules/site/logos/desktop-logo.png)
 
 Pros:
 
-- Made by GitHub and has solid GitHub implementation.
-- Simple GUI and easy to get started.
+- Made by GitHub and has solid GitHub implementation
+- Simple GUI and easy to get started
 
 Cons:
 
-- Can only use GitHub repos.
-- Not good at complex tasks.
-- **NO LINUX CLIENT **:cry:.
+- Can only use GitHub repos
+- Not good at complex tasks
+- **NO LINUX CLIENT **😢
 
-Second, our favorite, GitKraken:
+Second, our favorite, GitKraken.
 
-*Note, you can get the pro version of GitKraken with the student pack.*
+*Note: You can get the pro version of GitKraken with the student pack.*
 
 ![GitKraken Logo](https://www.gitkraken.com/downloads/brand-assets/gitkraken-logo-dark-sq.png)
 
-Pros
+Pros:
 
-- Feature packed.
-- Keyboard shortcuts and all.
-- Visualize your project.
-- Built on Electron.js, i.e. native desktop applications, i.e. works on LINUX —Windows, and Mac OS!!!
-- Easy and fast to use after practice.
+- Feature packed
+- Keyboard shortcuts
+- Visualize your project
+- Built on Electron.js, i.e. native desktop applications, i.e. works on LINUX, Windows, and Mac OS
+- Easy and fast to use after practice
 
-Cons
+Cons:
 
-- Possibly confusing, minor learning curve.
+- Possibly confusing, minor learning curve
 
 ## Your Turn
 
 #### Start using GitHub
 
-To start using GitHub you will first need Git itself. To download Git, head over to their [downloads page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Consider what OS you're using and download the proper version accordingly.
+To start using GitHub you will first need git itself. To download git, head over to their [downloads page](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Consider what OS you're using and download the proper version accordingly.
 
-*Note: If you're on the school computers, don't worry about this as the school computers already have Git installed.*
+*Note: If you're on the school computers, don't worry about this; the school computers already have Git installed.*
 
 Next headover to [GitHub][https://github.com/] and create an account. While you're at it, also apply for the GitHub student pack [here](https://education.github.com/pack).
 
-Start by creating a new repository. You first name the repo. That's all that's needed to get started. However, you can choose to add additional things to your GitHub repo such as a Description, README, .gitignore, license, and wheter you want you're project public or private.
+Start by creating a new repository. You first name the repo. That's all that's needed to get started. However, you can choose to add additional things to your GitHub repo such as a Description, README, .gitignore, license, and whether you want your project public or private.
 
-##### What is a README.md?
+#### What is a README.md?
 
 This is the file that github will add below your project and can be configured to show anything:
 
 [![image.png](https://i.postimg.cc/W42C0wDF/image.png)](https://postimg.cc/G45XCYxd)
 
+#### What is .gitignore?
 
-
-##### What is .gitignore?
-
-A .gitignore file allows you to ignore uploading specific files or folders. To make a .gitignore, either create a new .txt file and rename it to .gitignore and select `Type: all`. If you are using Mac OS or Linux you can type the following command to add a .gitignore.
+A .gitignore file allows you to ignore uploading specific files or folders. To make a .gitignore, create a new .txt file, rename it to .gitignore, and select `Type: all`. If you are using Mac OS or Linux you can type the following command to add a .gitignore.
 
 ```bash
 cd ~/whatever/directory/your/using
 touch .gitignore
 ```
 
-From there you can add the locations to the files and folders you want to ignore in that .gitignore file.
+From there you can add the locations to the files and folders you want to ignore in the .gitignore file.
 
-##### What are licenses?
+#### What are licenses?
 
 To make a software project open source you **need** a license. GitHub provides a multitude of licenses that you can add to your project. To figure out what license is right for you, you can use the following [site](https://choosealicense.com/).
 
-#### Start Working on Your Project
+#### Start working on your project
 
-Once you've created your project you will see code similar to the following in your project:
+Once you've created your project, you will see some code like:
 
 ```bash
 echo "# git-example" >> README.md
@@ -319,6 +336,28 @@ git remote add origin https://github.com/MBHS-DevClub/git-example.git
 git push -u origin master
 ```
 
-This uses the HTTPS protocal to setup the repo but you can also use the SSH protocal if you have a key setup on your device. The last option is to open your project directly in GitHub desktop, or if you use GitKraken you can clone your project into a directory of your choosing.
+This uses the HTTPS protocal to setup the repo, but you can also use the SSH protocal if you have a key set up on your device. The last option is to open your project directly in GitHub desktop, or if you use GitHubKraken you can clone your project into a directory of your choosing.
 
-*If this is your first time using git you may be asked to add a username or email to connect your git client with your online repo.*
+*If this is your first time using git, you may be asked to add a username or email to connect your git client with your online repo.*
+
+#### Pull requests
+
+You won't always have full access to the project you want to edit. In this case, you can use a pull request. To start, go to the desired directory and find the Fork Button:
+
+![Fork Button](https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png)
+
+From there, you should now have a forked repo in your own directory. After editing your own repo, click "New Pull Request" to request a merger of your branch with the original branch:
+
+![](https://help.github.com/assets/images/help/pull_requests/branch-dropdown.png)
+
+From there, the owner of the orginal branch can view the changes and choose whether to merge the files. Try this by forking our own [repo](https://github.com/MBHS-DevClub/git-example). Start by creating a pull request to add your own controversial topic.
+
+#### GitHub issues
+
+GitHub has a rather unique feature for issues. Issues comprise of errors in the owner's GitHub repo code to general issues with implementing the repo — sort of in a StackOverFlow style. Start by creating a new issue. The text can include markdown; you can add labels, assign people, and much more. This is definitely something with which you should play around by using our [repo](https://github.com/MBHS-DevClub/git-example).
+
+![Issues Example](https://guides.github.com/features/issues/listing-screen.png)
+
+The owner to the repo can reference a given issue using the # symbol or the hash code of the commit. This hash code can be found at the end of a commit's url. The owner can either manually close an issue or can use the keyword *Fix* when commiting a change (`Fixes #2`).
+
+Overall, git and GitHub are things with which you have to experiment to really learn. If you want to work with pull requests and issues, feel free to mess around with our [repo](https://github.com/MBHS-DevClub/git-example).
