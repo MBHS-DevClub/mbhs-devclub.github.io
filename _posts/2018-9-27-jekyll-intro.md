@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to Git & GitHub
+title: Jekyll Intro
 tags: [Jekyll, YAML]
 excerpt_separator: <!--more-->
 ---
