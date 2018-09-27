@@ -1,9 +1,3 @@
----
-layout: post
-title: Jekyll Intro
-tags: [Jekyll, YAML]
-excerpt_separator: <!--more-->
----
 
 # Jekyll and its Mysteries
 

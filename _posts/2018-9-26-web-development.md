@@ -1,12 +1,3 @@
----
-layout: post
-title: Introduction to Git & GitHub
-tags: [HTML, CSS, JS, WebDev]
-excerpt_separator: <!--more-->
----
-
-
-
 # Web Development
 
 ### Introduction
@@ -21,7 +12,7 @@ Gives structure to the website.
 
 ### Basic Structure
 
-HTML utilizes tags to format the content of websites. Tags are denoted by angle brackets ("< >"). 
+HTML utilizes tags to format the content of websites. Tags are denoted by angle brackets ("< >").
 
 Almost every website will use `<html>, <head>, <body> ...`
 
@@ -31,7 +22,7 @@ Almost every website will use `<html>, <head>, <body> ...`
         <!-- Put Metadata here -->
     	<title> My First Website </title>
     </head>
-    
+
     <body>
         <p>
             <!-- Put Structural Elements here -->
@@ -41,7 +32,7 @@ Almost every website will use `<html>, <head>, <body> ...`
 </html>
 ```
 
-**Tags:** 
+**Tags:**
 
 ### Basic Webpage
 
@@ -50,7 +41,7 @@ Almost every website will use `<html>, <head>, <body> ...`
     <head>    
     	<title> My First Website</title>
     </head>
-    
+
     <body>
     	<div>
     	<h1> Welcome </h1>
@@ -60,16 +51,16 @@ Almost every website will use `<html>, <head>, <body> ...`
         </div>
         <img src = "https://mbhs-devclub.github.io/assets/img/noText.png">
         <a href = "https://mbhs-devclub.github.io/"> Club Website </a>
-        
+
     </body>
 </html>
 ```
 
-**Tags Explained:** 
+**Tags Explained:**
 
 * `<h1>`: This is a **header** tag. Sizes range from `<h1> to <h6>`
 * `<p>` **Paragraph** tag. Used for displaying text.
-* `<img>` **Image** tag. 
+* `<img>` **Image** tag.
 * `<a>` **Anchor** tag. Used for links to other places. Use HREF.
 * `<div>` **Division** tag. Defines a block of content for organization, but does not add any semantic value.
 
@@ -92,13 +83,24 @@ The word `body` refers to the selector of all HTML body tags. In CSS, the attrib
 
 The text `font-size: 14px` represents a property value pair.
 
+Examples of properties include:
+
+```
+color: Tomato; /* Text color */
+background-color: lightblue; /* Background color */
+border-style: dotted; /* Creates a dotted border*/
+margin-top: 50px; /* Positions the element*/
+padding-top: 20px; /* Inserts padding for an element */
+height: 200px; /* Defines the boundary of the element */
+```
+
 ### Integration
 
-There are three ways to integrate CSS into HTML. 
+There are three ways to integrate CSS into HTML.
 
 **Inline Styling** 
 
-```HTML
+```
 <p style="color: red">text</p>
 ```
 
@@ -107,7 +109,7 @@ There are three ways to integrate CSS into HTML.
 
 **Internal Styling** 
 
-```HTML
+```
 <html>
     <head>    
     	<title> My First Website</title>    
@@ -119,7 +121,6 @@ There are three ways to integrate CSS into HTML.
     </head>
     ...    
 </html>
-    
 ```
 
 * Apply CSS in the same HTML file
@@ -129,7 +130,7 @@ There are three ways to integrate CSS into HTML.
 
 main.css 
 
-```CSS
+```
 p {
     color: red;
 }
@@ -141,7 +142,7 @@ a {
 
 index.html 
 
-```HTML
+```
 <html>
 <head>
     <title>CSS Playground!</title>
@@ -160,11 +161,11 @@ There are two main types of JavaScript programming. One is the inner processing 
 
 #### Where to Write Your JavaScript
 There are three options for where to write your javascript. The first is to write it directly in your HTML formatting:
-```JavaScript
+```
 <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date.</button>
 ```
 The second is to write it in your script
-```HTML
+```]
 <script>
 // Create and display a variable:
 var animal = "Dog";
@@ -176,14 +177,14 @@ And lastly, you can reference an external JavaScript file
 #### Basic Brainy Javascript
 
 Here are the basic data types you should know for now
-```JavaScript
+```
 var k = 1;                               // Number
 var name = "Itamar";                      // String
 var x = {firstName:"Itamar", lastName:"Fiorino"};    // Object
 ```
 
 Creating and modifying variables (notice the semicolons):
-```JavaScript
+```
 var a, b, c;    // Creating 3 variables with "null" values (could be numbers or strings for all JavaScript cares
 a = 1;          // Sets a to 1
 b = 2;          // Sets b to 2
@@ -191,11 +192,11 @@ z = x + y;      // After this statement, C will equal 3
 ```
 
 Functions can return values (ask us if this confuses you) or can just do things to output:
-```JavaScript
+```
 function f(p1, p2) {
     return p1 * p2;              // The function returns the product of p1 and p2
 }
-console.log(f(2,3))        //will display 6 into the console 
+console.log(f(2,3))        //will display 6 into the console
 ```
 
 Some more basic commands:  
@@ -223,8 +224,8 @@ JavaScript can "display" data in different ways:
 ' Writing into an alert box, using window.alert().
 ' Writing into the browser console, using console.log().
 
-Try out these code snippets: 
-```JavaScript
+Try out these code snippets:
+```
 var animals = ["cat", "dog", "mouse"];
 document.getElementById("demo").innerHTML = fruits;
 
@@ -235,4 +236,4 @@ function function() {
 ```
 To run "function" in an HTML file, just call your function "function" which will modify the text within a \<p\> with id="demo"
 
-Try testing out different functions and get some JS excercise, then you can start learning JQuery, JSON, AJAX, Node.JS, Jekyll, and more. W3Schools is an **Excellent** source of information
+Try testing out different functions and get some JS exercise, then you can start learning JQuery, JSON, AJAX, Node.JS, Jekyll, and more. W3Schools is an **Excellent** source of information
