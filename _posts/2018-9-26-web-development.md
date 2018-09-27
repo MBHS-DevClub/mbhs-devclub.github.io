@@ -145,5 +145,85 @@ index.html
 
 ## JS
 
-Give your webpage some sparkle!
+JS is your source of proccessing. Within Javascript, you may manage your website in the backend. The "Brain" of your website, javascript can modify the outside with sparkly commands and even machine learning. Javascript is used by pretty much everyone and is super popular. It may not be an amazing piece of software that can do anything and it may be vulnerable to attacks, but JavaScript, like English, is a universal language.
 
+There are two main types of JavaScript programming. One is the inner processing (i.e. changing variables, loops, basic programming), and the other is it's interaction with the "outside world" (i.e. getting a field name, changing css (color and stuff), changing text). First we're going to show you some basic back end, then we'll show you how to make that manipulation useful, and then we'll keep on learning both of these.
+
+#### Where to Write Your JavaScript
+There are three options for where to write your javascript. The first is to write it directly in your HTML formatting:
+```JavaScript
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date.</button>
+```
+The second is to write it in your script
+```HTML
+<script>
+// Create and display a variable:
+var animal = "Dog";
+document.getElementById("demo").innerHTML = animal;
+</script>
+```
+And lastly, you can reference an external JavaScript file
+
+#### Basic Brainy Javascript
+
+Here are the basic data types you should know for now
+```JavaScript
+var k = 1;                               // Number
+var name = "Itamar";                      // String
+var x = {firstName:"Itamar", lastName:"Fiorino"};    // Object
+```
+
+Creating and modifying variables (notice the semicolons):
+```JavaScript
+var a, b, c;    // Creating 3 variables with "null" values (could be numbers or strings for all JavaScript cares
+a = 1;          // Sets a to 1
+b = 2;          // Sets b to 2
+z = x + y;      // After this statement, C will equal 3
+```
+
+Functions can return values (ask us if this confuses you) or can just do things to output:
+```JavaScript
+function f(p1, p2) {
+    return p1 * p2;              // The function returns the product of p1 and p2
+}
+console.log(f(2,3))        //will display 6 into the console 
+```
+
+Some more basic commands:  
+
+Keyword	| Description
+---	|---
+break	| 	Terminates a switch or a loop
+continue	| 	Jumps out of a loop and starts at the top
+debugger	| 	Stops the execution of JavaScript, and calls (if available) the debugging function
+do ... while	| 	Executes a block of statements, and repeats the block, while a condition is true
+for	| 	Marks a block of statements to be executed, as long as a condition is true
+function	| 	Declares a function
+if ... else	| 	Marks a block of statements to be executed, depending on a condition
+return	| 	Exits a function
+switch	| 	Marks a block of statements to be executed, depending on different cases
+try ... catch	| 	Implements error handling to a block of statements
+var	| 	Declares a variable
+
+#### Basic Functional Javascript
+
+JavaScript can "display" data in different ways:
+
+' Writing into an HTML element, using innerHTML.
+' Writing into the HTML output using document.write().
+' Writing into an alert box, using window.alert().
+' Writing into the browser console, using console.log().
+
+Try out these code snippets: 
+```JavaScript
+var animals = ["cat", "dog", "mouse"];
+document.getElementById("demo").innerHTML = fruits;
+
+function function() {
+    animals.sort();
+    document.getElementById("demo").innerHTML = fruits;
+}
+```
+To run "function" in an HTML file, just call your function "function" which will modify the text within a \<p\> with id="demo"
+
+Try testing out different functions and get some JS excercise, then you can start learning JQuery, JSON, AJAX, Node.JS, Jekyll, and more. W3Schools is an **Excellent** source of information
