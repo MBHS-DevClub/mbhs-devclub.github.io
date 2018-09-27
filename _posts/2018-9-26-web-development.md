@@ -1,4 +1,9 @@
-# Web Development
+---
+layout: post
+title: Web Development Basics
+tags: [HTML, CSS, JS]
+excerpt_separator: <!--more-->
+---
 
 ### Introduction
 
@@ -98,7 +103,7 @@ height: 200px; /* Defines the boundary of the element */
 
 There are three ways to integrate CSS into HTML.
 
-**Inline Styling** 
+**Inline Styling**
 
 ```
 <p style="color: red">text</p>
@@ -107,7 +112,7 @@ There are three ways to integrate CSS into HTML.
 * Convenient
 * But, use sparingly
 
-**Internal Styling** 
+**Internal Styling**
 
 ```
 <html>
@@ -128,7 +133,7 @@ There are three ways to integrate CSS into HTML.
 
 **External Styling**
 
-main.css 
+main.css
 
 ```
 p {
@@ -140,7 +145,7 @@ a {
 }
 ```
 
-index.html 
+index.html
 
 ```
 <html>
@@ -165,7 +170,7 @@ There are three options for where to write your javascript. The first is to writ
 <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date.</button>
 ```
 The second is to write it in your script
-```]
+```
 <script>
 // Create and display a variable:
 var animal = "Dog";
