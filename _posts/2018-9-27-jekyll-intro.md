@@ -2,9 +2,8 @@
 layout: post
 title: Introduction to Git & GitHub
 tags: [Jekyll, YAML]
+excerpt_separator: <!--more-->
 ---
-
-
 
 # Jekyll and its Mysteries
 
