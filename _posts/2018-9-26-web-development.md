@@ -1,8 +1,17 @@
+---
+layout: post
+title: Introduction to Git & GitHub
+tags: [HTML, CSS, JS, WebDev]
+excerpt_separator: <!--more-->
+---
+
+
+
 # Web Development
 
 ### Introduction
 
-This is the bread and butter of websites.
+This is the bread and butter of the frontend.
 
 ## HTML
 
@@ -87,7 +96,7 @@ The text `font-size: 14px` represents a property value pair.
 
 There are three ways to integrate CSS into HTML. 
 
-**Inline Styling**
+**Inline Styling** 
 
 ```HTML
 <p style="color: red">text</p>
@@ -96,7 +105,7 @@ There are three ways to integrate CSS into HTML.
 * Convenient
 * But, use sparingly
 
-**Internal Styling**
+**Internal Styling** 
 
 ```HTML
 <html>
@@ -118,7 +127,7 @@ There are three ways to integrate CSS into HTML.
 
 **External Styling**
 
-main.css
+main.css 
 
 ```CSS
 p {
@@ -130,7 +139,7 @@ a {
 }
 ```
 
-index.html
+index.html 
 
 ```HTML
 <html>
