@@ -1,4 +1,13 @@
+---
+layout: post
+title: Introduction to Git & GitHub
+tags: [Jekyll, YAML]
+---
+
+
+
 # Jekyll and its Mysteries
+
 ## Installing Jekyll
 
 #### MacOS
