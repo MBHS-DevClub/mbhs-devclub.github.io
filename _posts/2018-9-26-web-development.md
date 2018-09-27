@@ -32,7 +32,7 @@ Almost every website will use `<html>, <head>, <body> ...`
 </html>
 ```
 
-**Tags: **
+**Tags:** 
 
 ### Basic Webpage
 
@@ -56,11 +56,11 @@ Almost every website will use `<html>, <head>, <body> ...`
 </html>
 ```
 
-**Tags Explained: **
+**Tags Explained:** 
 
 * `<h1>`: This is a **header** tag. Sizes range from `<h1> to <h6>`
-* `<p>` **Paragraph **tag. Used for displaying text.
-* `<img>` **Image **tag. 
+* `<p>` **Paragraph** tag. Used for displaying text.
+* `<img>` **Image** tag. 
 * `<a>` **Anchor** tag. Used for links to other places. Use HREF.
 * `<div>` **Division** tag. Defines a block of content for organization, but does not add any semantic value.
 
