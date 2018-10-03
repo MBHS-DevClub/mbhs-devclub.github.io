@@ -4,7 +4,8 @@ title: Web Development Basics
 tags: [HTML, CSS, JS]
 excerpt_separator: <!--more-->
 ---
-[toc]
+* TOC
+{:toc}
 
 ### Introduction
 
