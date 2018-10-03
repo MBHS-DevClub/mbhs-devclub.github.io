@@ -4,6 +4,7 @@ title: Web Development Basics
 tags: [HTML, CSS, JS]
 excerpt_separator: <!--more-->
 ---
+[toc]
 
 ### Introduction
 
@@ -158,14 +159,14 @@ index.html
 * Organized and Modular
 * Useful if website is large and has many parts
 
-## JS
+## JavaScript
 
-JS is your source of proccessing. Within Javascript, you may manage your website in the backend. The "Brain" of your website, javascript can modify the outside with sparkly commands and even machine learning. Javascript is used by pretty much everyone and is super popular. It may not be an amazing piece of software that can do anything and it may be vulnerable to attacks, but JavaScript, like English, is a universal language.
+JS is your source of proccessing. Within JavaScript, you may manage your website in the backend. The "Brain" of your website, JavaScript can modify the outside with sparkly commands and even machine learning. JavaScript is used by pretty much everyone and is super popular. It may not be an amazing piece of software that can do anything and it may be vulnerable to attacks, but JavaScript, like English, is a universal language.
 
 There are two main types of JavaScript programming. One is the inner processing (i.e. changing variables, loops, basic programming), and the other is it's interaction with the "outside world" (i.e. getting a field name, changing css (color and stuff), changing text). First we're going to show you some basic back end, then we'll show you how to make that manipulation useful, and then we'll keep on learning both of these.
 
 #### Where to Write Your JavaScript
-There are three options for where to write your javascript. The first is to write it directly in your HTML formatting:
+There are three options for where to write your JavaScript. The first is to write it directly in your HTML formatting:
 ```
 <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date.</button>
 ```
