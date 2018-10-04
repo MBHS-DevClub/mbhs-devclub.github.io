@@ -4,8 +4,6 @@ title: Editors, Bootstrap, and more JavaScript
 tags: [editors, bootstrap, JS]
 excerpt_separator: <!--more-->
 ---
-* TOC
-{:toc}
 
 ## Editor Potpourri
 Editors allow us to edit the source code of our programs. The most basic example of this is your Notepad editor. When it comes to editors, you have two main options: a GUI editor or a CLI editor.
@@ -17,7 +15,7 @@ For GUI editors, you have three main options: Atom, Visual Studio, and Sublime. 
 <div style="text-align:center"><img src ="https://dashboard.snapcraft.io/site_media/appmedia/2017/04/atom-256px.png" /></div>
 
 - Made by GitHub
-- Free 
+- Free
 - Packages
 - Works great with GitHub
 
@@ -37,7 +35,7 @@ For GUI editors, you have three main options: Atom, Visual Studio, and Sublime. 
 For CLI editors you once again have three main options: Vim, Nano, and Emacs.
 <div style="text-align:center"><img src ="https://i.stack.imgur.com/7Cu9Z.jpg" /></div>
 
-MacOS comes with Vim, and to get started with a basic tutorial, in your terminal type `vimtutor`. Ubuntu also has Vim has it installed. For windows, just headover [here](https://www.vim.org/download.php). 
+MacOS comes with Vim, and to get started with a basic tutorial, in your terminal type `vimtutor`. Ubuntu also has Vim has it installed. For windows, just headover [here](https://www.vim.org/download.php).
 
 Nano comes pre-installed with Arch Linux and is similar. Emacs is preferred by most professionals.
 
@@ -48,7 +46,7 @@ Bootstrap is a *front end framework*. As you may have realized, building a websi
 ###### *This demo was inspired by the Bootstrap documentation*
 #### Setting up---your first project
 Here's your starting code---check the comments and ask what you don't know:
-```
+```html
 <!doctype html>
 <html lang="en">
     <head>
@@ -72,16 +70,19 @@ Here's your starting code---check the comments and ask what you don't know:
   </body>
 </html>
 ```
-  
-  
+
+
 #### Containers
 These are the main layout elements in Bootstrap. There are two types of containers:
-* Regular
-```
+- Regular
+
+```html
 <div class="container" id="uniqueId1">some text</div>
 ```
-* Fluid - fills content space
-```
+
+- Fluid - fills content space
+
+```html
 <div class="container-fluid" id="uniqueId1">some text</div>
 ```
 
@@ -93,13 +94,13 @@ Bootstrap's responsive grid system allows for variable columns. There are four m
 * **md** (for small laptops - screens equal to or greater than 992px wide)
 * **lg** (for laptops and desktops - screens equal to or greater than 1200px wide)
 
-The classes above can be combined to create more dynamic and flexible layouts. Within a *row* class, you must have several *col*s with different widths; the notation is `<div class="col-*-*">`
+The classes above can be combined to create more dynamic and flexible layouts. Within a *row* class, you must have several *cols* with different widths; the notation is `<div class="col-*-*">`
 
 These column widths should normally add up to 12. Check out the demo and mess around with it---it's your playground.
 
 
 #### Demo---have fun with this
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,13 +134,13 @@ These column widths should normally add up to 12. Check out the demo and mess ar
         <div class="col-lg-4" style="background-color:lavenderblush;" id="bordered">.col-lg-3</div>
     </div>
 </div>
-    
+
 </body>
 </html>
 ```
 #### Text in Bootstrap
 Bootstrap comes with many simple tags for text manipulation. Add these to your demo and experiment.
-```
+```html
 <p>Use the mark element to <mark>highlight</mark> text.</p>
 <p>Abbr will do this: <abbr title="United States">US</abbr>. Below is a blockquote.</p>
 <blockquote class="blockquote-reverse">
@@ -174,7 +175,7 @@ Other useful resources:
     * Some sort of JavaScript animation
     * *\*hard\** Use jQuery to create a tooltip or popover *\*hard\**
     * *\*very hard\** Using a working scrollspy *\*very hard\**
-    
+
     * Throw this online and reference it to employers so you look really professional---this can be a personal website
 
 * Try breaking Bootstrap (Prize = ***infinite*** clout)
@@ -188,13 +189,13 @@ We'll first review functions. Functions allow the programmer to use the same scr
 > Imagine this: you write code for a task that needs to be repeated multiple times. You then change the main datatype for the function's input. Instead of just changing it once, you have to go through and fix it again and again; it's even annoying to copy-paste again because you changed the variable names. **Use functions.**
 
 A simple JS function looks like the following:
-```
+```javascript
 function showMessage() {
     alert( 'Hello everyone!' );
 }
 ```
 Following with the above example, if the message changes every time, copy-pasting would be a *terrible* idea. By creating a function, we can also ask for a **parameter**:
-```
+```javascript
 function showMessage(text, name) {
     var newText = "My message is: " + text + " from " + name;
     alert(newText);
@@ -205,7 +206,7 @@ showMessage("Stay smiling", "Dev Club")
 The above example also contains a **local variable**, which is a variable whose **scope** is only within the function. In other words, the variable `newText` from `showMessage()` has no effect on any other part of the code. In JS, variables defined in the `<script>` tag but not in a specific function are **global**, so one can still reference them in every function.
 
 If you have a function with a parameter that only sometimes needs changing, you can use **default values**. For an example, think of a function that figures out how to give a customer change in the least number of coins possible:
-```
+```javascript
 function giveChange(smallest = 0.01, secondSmallest = 0.05, secondLargest = 0.1, largest = 0.25, amount) {
     //implementation
 }
@@ -225,13 +226,13 @@ In JavaScript, objects have **properties** and **methods**. For example, a dog "
 
 Objects behave like variables, except that they can contain several values. When declaring an object, properties are written in a set of **name: value** pairs. For example, we can define an object to represent our dog:
 
-```
+```javascript
 var dog = {color: "brown", gender: "female", age: 9, name: "Princess", breed: "Pomeranian"};
 ```
 In the above example, the value "brown" is given to the "color" property, "female" to the "gender" property, and so on.
 
 Objects can also be created using the ``new`` keyword.
-```
+```javascript
 var dog = new Object();
 dog.color = "brown";
 dog.gender = "female";
@@ -239,7 +240,7 @@ dog.gender = "female";
 ```
 
 These properties can be accessed in two ways: ``object.property`` or ``object["property"]``. Continuing the example, we could access the properties of our dog by writing:
-```
+```javascript
 dog.color; // brown
 dog["gender"]; // female
 ```
@@ -249,7 +250,7 @@ A consequence of this is that JavaScript objects are **mutable**, meaning they a
 #### Arrays
 Arrays are collections of a single type of object. They can be nested and have multiple dimensions.
 
-```
+```javascript
 var dogs = ["Big One", "Little One", "Purple One"];
 ```
 
@@ -297,7 +298,7 @@ valueOf()	|Returns the primitive value of an array
 
 Methods are functions that are stored as properties of objects. They represent actions performed on objects. If we wanted a `description` method for our dog, we could declare it as follows:
 
-```
+```javascript
 var dog = {
     color: "brown",
     gender: "female",
@@ -318,7 +319,7 @@ dog.description(); // Princess is a brown Pomerarian.
 ```
 
 One type of common method is a **constructor**. Constructors establish a template for creating new objects. Here's an example of a ``dog`` constructor:
-```
+```javascript
 function Dog(c, n, b) {
     this.color = c;
     this.name = n;
@@ -346,8 +347,8 @@ Every JS object has this special property called `[[prototype]]`. To get this pr
 
 Inheritance allows the child to inherit properties from its prototype (parent) object. So, when a method or property is not found within the object itself, JS would look for that missing information in the prototype.
 
-As an example, let's create two objects, with miniVehicle (parent) as the prototype object of bike (child). 
-```
+As an example, let's create two objects, with miniVehicle (parent) as the prototype object of bike (child).
+```javascript
 let redVehicle = {
     color: "red";
 };
@@ -367,7 +368,7 @@ In this scenario, JS looks through bike's properties, but does not find the prop
 
 Now, linking multiple classes together would create a prototype chain.
 
-```
+```javascript
 let redVehicle = {
     color: "red";
     honk() {
@@ -432,7 +433,7 @@ Getters and setters in JS are a bit quirky. They're denoted by the `get` and `se
 
 Here is an example of getters and setters:
 
-```
+```javascript
 let car = {
     brand: "Generic",
 	model: "1000",
@@ -457,7 +458,7 @@ console.log("What is " + car.name + "?")
 
 Introduced in EMCAScript 2015, classes are really just an abstraction of the prototype model of JS. Under the hood, they're just modified constructor methods.
 
-```
+```javascript
 class User {
 
   constructor(name) {
