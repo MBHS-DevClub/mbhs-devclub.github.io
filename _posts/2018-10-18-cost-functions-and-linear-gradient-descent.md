@@ -25,7 +25,7 @@ By now, you should be familiar with everything covered in the *[AI Begins](https
 
 For our supervised learning models, 
 
-- $$x_i$$ will denote an item in our list of inputs, or features
+- ``x_i`` will denote an item in our list of inputs, or features
 - $y_i$ will denote an item in our list of output, or labels
 - $m$ will be the amount of training points (the amount of $i$s)
   - Note that $i$ is simply an index (think of python lists)
