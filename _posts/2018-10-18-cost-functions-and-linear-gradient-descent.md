@@ -25,7 +25,7 @@ By now, you should be familiar with everything covered in the *[AI Begins](https
 
 For our supervised learning models, 
 
-- $x_i$ will denote an item in our list of inputs, or features
+- $$x_i$$ will denote an item in our list of inputs, or features
 - $y_i$ will denote an item in our list of output, or labels
 - $m$ will be the amount of training points (the amount of $i$s)
   - Note that $i$ is simply an index (think of python lists)
@@ -38,9 +38,11 @@ Can you spot each of these terms in the context of this graph?
 <div style="text-align:center"><img src ="https://i.postimg.cc/C5kqPcFk/download_1.png" /></div>
 
 For our supervised learning problems, our goal will be to use our training points (of features and labels) to make a hypothesis, or prediction. This hypothesis will be called $h(x)$:
+
 $$
 h(x) = w_0x + w_1
 $$
+
 Look familiar? In our linear regression model from last time, this prediction function is commonly known as the line of best fit.
 
 If our label is a continuous range, we would call this a *regression* problem; if it is a series of concrete labels, (C section vs No C section) we call our problem a *classification* problem.
@@ -48,6 +50,7 @@ If our label is a continuous range, we would call this a *regression* problem; i
 ## Evaluating our Hypothesis
 
 To get the best possible $h(x)$, we must determine a way to evaluate it---to determine if we've made an accurate prediction or a shitty one. This is called our **cost function**. There are many different ways to evaluate this function, but the one we'll be using is mean squared error (MSE), which follows this equation:
+
 $$
 J(w_0, w_1)=\frac{1}{2m}\sum_{i=1}^m{(h_w(x_i)-y_i)^2}
 $$
@@ -70,9 +73,11 @@ Can you think of what would happen if instead of squaring our difference (MSE), 
 ### One Parameter
 
 Imagine our hypothesis is defined as:
+
 $$
 h(w_0) = w_0x
 $$
+
 and our training points are plotted as such:
 
 <center><div style="text-align:center; width:35%"><img src ="https://i.postimg.cc/j2fcGrDX/plot1.png" /></div></center>
@@ -90,9 +95,11 @@ Training our model means finding the basin---the absolute minimum---of this cost
 ### Two variable
 
 Now, let's say our prediction will take two variables:
+
 $$
 h(w_1,w_2)=w_1x+w_2
 $$
+
 Visualizing our cost function will now require another dimension. This can be visualized in two ways: a 3d graph, or a contour plot:
 
 <center><div style="text-align:center; width:50%"><img src ="https://www.mathworks.com/help/examples/graphics/win64/SurfaceAndContourPlotOfPeaksFunctionExample_01.png" /></div></center>
@@ -108,6 +115,7 @@ For higher-parameter problems, we need gradient descent. Gradient descent is a m
 #### The formula
 
 To start off, the gradient descent algorithm follows this function, where $\alpha$ is the learning rate:
+
 $$
 w_j:=w_j-\alpha\frac{\delta}{\delta w_j}J(w_0,w_1)
 \\
@@ -131,6 +139,7 @@ This works because gradient descent gets the slope at your current point and mov
 #### Simultaneous update
 
 Gradient descent, to work properly, uses a *simultaneous update*, so you must update the parameters at the same time or with the same parameter values. Refer to the following diagram:
+
 $$
 temp_0 := w_0-\alpha\frac{\delta}{\delta w_0}J(w_0,w_1)
 \\
@@ -140,6 +149,7 @@ w_0:=temp_0
 \\
 w_1:=temp_1
 $$
+
 If we didn't do it this way, what would our gradient descent look like? Would it work?
 
 #### Local minima
