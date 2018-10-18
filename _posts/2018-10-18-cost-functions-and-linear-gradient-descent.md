@@ -25,19 +25,19 @@ By now, you should be familiar with everything covered in the *[AI Begins](https
 
 For our supervised learning models, 
 
-- ``x_i`` will denote an item in our list of inputs, or features
+- $$x_i$$ will denote an item in our list of inputs, or features
 - $$y_i$$ will denote an item in our list of output, or labels
-- $m$ will be the amount of training points (the amount of $i$s)
-  - Note that $i$ is simply an index (think of python lists)
-- A pair $(x_i, y_i)$ will be a training example
-- $X$ and $Y$ will represent the space of output/input values
-  - For this example, $Y=X=\mathbb{R}$
+- $$m$$ will be the amount of training points (the amount of $i$s)
+  - Note that $$i$$ is simply an index (think of python lists)
+- A pair $$(x_i, y_i)$$ will be a training example
+- $$X$$ and $$Y$$ will represent the space of output/input values
+  - For this example, $$Y=X=\mathbb{R}$$
 
 Can you spot each of these terms in the context of this graph?
 
 <div style="text-align:center"><img src ="https://i.postimg.cc/C5kqPcFk/download_1.png" /></div>
 
-For our supervised learning problems, our goal will be to use our training points (of features and labels) to make a hypothesis, or prediction. This hypothesis will be called $h(x)$:
+For our supervised learning problems, our goal will be to use our training points (of features and labels) to make a hypothesis, or prediction. This hypothesis will be called $$h(x)$$:
 
 $$
 h(x) = w_0x + w_1
@@ -45,11 +45,11 @@ $$
 
 Look familiar? In our linear regression model from last time, this prediction function is commonly known as the line of best fit.
 
-If our label is a continuous range, we would call this a *regression* problem; if it is a series of concrete labels, (C section vs No C section) we call our problem a *classification* problem.
+If our label is a continuous range, we would call this a *regression* problem; if it is a series of concrete labels, (C-section vs No C-section) we call our problem a *classification* problem.
 
 ## Evaluating our Hypothesis
 
-To get the best possible $h(x)$, we must determine a way to evaluate it---to determine if we've made an accurate prediction or a shitty one. This is called our **cost function**. There are many different ways to evaluate this function, but the one we'll be using is mean squared error (MSE), which follows this equation:
+To get the best possible $$h(x)$$, we must determine a way to evaluate it---to determine if we've made an accurate prediction or a shitty one. This is called our **cost function**. There are many different ways to evaluate this function, but the one we'll be using is mean squared error (MSE), which follows this equation:
 
 $$
 J(w_0, w_1)=\frac{1}{2m}\sum_{i=1}^m{(h_w(x_i)-y_i)^2}
@@ -82,11 +82,11 @@ and our training points are plotted as such:
 
 <center><div style="text-align:center; width:35%"><img src ="https://i.postimg.cc/j2fcGrDX/plot1.png" /></div></center>
 
-For this example, our prediction is fairly obvious ($w=1$); if we change $w$ to $\frac{1}{2}$ or $2$, our cost function will obviously increase, since the prediction function isn't fitting our data as well as it could.
+For this example, our prediction is fairly obvious ($$w=1$$); if we change $$w$$ to $$\frac{1}{2}$$ or $$2$$, our cost function will obviously increase, since the prediction function isn't fitting our data as well as it could.
 
 <center><div style="text-align:center; width:35%"><img src ="https://i.postimg.cc/59DkpsXg/plot2.png" /></div></center>
 
-By plotting $w$ against cost, we can see how diverging from $w=1$ will make our model less effective.
+By plotting $$w$$ against cost, we can see how diverging from $$w=1$$ will make our model less effective.
 
 <center><div style="text-align:center; width:35%"><img src ="https://i.postimg.cc/xdLvPPbk/plot3.png" /></div></center>
 
@@ -108,13 +108,13 @@ Again, our training mission will be to find the lowest point on this graph, mini
 
 ## Gradient Descent
 
-For higher-parameter problems, we need gradient descent. Gradient descent is a method of finding *local* minimums in functions by making tiny changes to the weights in $h$, our hypothesis.
+For higher-parameter problems, we need gradient descent. Gradient descent is a method of finding *local* minimums in functions by making tiny changes to the weights in $$h$$, our hypothesis.
 
 <center><div style="text-align:center; width:30%"><img src ="https://cdn-images-1.medium.com/max/1600/1*Wj0IlRPf3cSL-k-_WLy8hQ.gif" /></div></center>
 
 #### The formula
 
-To start off, the gradient descent algorithm follows this function, where $\alpha$ is the learning rate:
+To start off, the gradient descent algorithm follows this function, where $$\alpha$$ is the learning rate:
 
 $$
 w_j:=w_j-\alpha\frac{\delta}{\delta w_j}J(w_0,w_1)
@@ -166,7 +166,7 @@ You'll learn how to overcome this later.
 
 #### Why simultaneous gradient descent won't always work
 
-This is an example of a vector field that isn't conservative. (A conservative vector field is a slope field that represents the gradient of some function.) While there is equilibrium at $(0,0)$, simultaneous gradient descent will never solve it. Don't worry, this reaches a level of abstraction greater than we'll reach, so you won't encounter something like this.
+This is an example of a vector field that isn't conservative. (A conservative vector field is a slope field that represents the gradient of some function.) While there is equilibrium at $$(0,0)$$, simultaneous gradient descent will never solve it. Don't worry, this reaches a level of abstraction greater than we'll reach, so you won't encounter something like this.
 
 <center><div style="text-align:center; width:40%"><img src ="https://www.inference.vc/content/images/2017/11/foo.gif" /></div></center>
 
