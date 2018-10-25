@@ -22,7 +22,8 @@ Some common scenarios could be...
 ## An Initial Exploration
 We could try by extending our linear regression. Let's train our linear model to return a **score**, and if the score meets a **cutoff**, we would return one value. Or else, the other value would be returned.
 
-```if w_0 + w_1x_1 + w_2x_2 >= c:
+```
+if w_0 + w_1x_1 + w_2x_2 >= c:
   return 1
 else:
   return 0
