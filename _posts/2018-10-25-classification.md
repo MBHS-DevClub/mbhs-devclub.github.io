@@ -25,7 +25,8 @@ We could try by extending our linear regression. Let's train our linear model to
 ```if w_0 + w_1x_1 + w_2x_2 >= c:
   return 1
 else:
-  return 0```
+  return 0
+ ```
 
 <div style="text-align:center"><img src ="https://i.imgur.com/UXeru5y.png" /></div>
 
