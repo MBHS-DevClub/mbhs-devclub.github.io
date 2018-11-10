@@ -126,7 +126,7 @@ Today, we'll be tackling the XOR problem. The challenge was to design an algorit
 
 The XOR gate is simple. The gate accepts two Boolean inputs, A and B, and only returns true if A is *not* B.
 
-<div style="text-align:center"><img src="https://www.dyclassroom.com/image/topic/logic-gate/xor-xnor/xor-table.png"/ height = "150"></div>
+<div style="text-align:center"><img src="https://www.dyclassroom.com/image/topic/logic-gate/xor-xnor/xor-table.png" height = "150"></div>
 
 But, simple classifiers won't work here. For example, if we try to use linear regression, we quickly find out that no line can split the data.
 
@@ -160,7 +160,7 @@ $$
 \begin{bmatrix}
 -0.93091329 \ -0.74916903 \ -0.16796104 \ -0.87367407 \\
 -0.71351416 \ -0.99739096 \ 0.81273366 \ -0.21139755 \\
-0.39576155 \ -0.73883258 \ -0.4423791 \ -0.26838341 \\
+0.39576155 \ -0.73883258 \ -0.4423791 \ -0.26838341
 \end{bmatrix}
 $$
 
