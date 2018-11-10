@@ -1,3 +1,10 @@
+---
+layout: post
+title: Implementing XOR
+tags: [ai, ml, dl, nns, perceptrons, xor, implementation]
+excerpt_separator: <!--more-->
+---
+
 # Implementing XOR
 
 > Follow along [here](https://colab.research.google.com/drive/1hKoBqCqhvBn2D5T6TzoKxBxCLmBITDY_).
@@ -14,7 +21,8 @@ In order to assign specific values to our object, we create **instances**.
 > For example, we can create a member of the `dog` class with "Fido" as the `name` , "bork bork" as the `barkSound`, and 3 as the `hunger`.
 
 Here is how we could implement this:
-```python=
+
+```python
 class Dog:
     def __init__(self, name, barkSound, hunger):
         self.name = name
@@ -65,12 +73,12 @@ a = np.array([2, 3, 1, 0])
 b = np.array([[ 1.+0.j, 2.+0.j], [ 0.+0.j, 0.+0.j], [ 1.+1.j, 3.+0.j]]) #what would this create?
 ```
 
-A NumPy array has certain attributes: The data type, or `dtype`, represents the data type of each element; the `shape` represents the $n\times m$ shape of the array (remember matrices?); the `size` represents the total number of elements; and the number of dimensions, or `ndim`, can show whether the array is 2D, 3D, etc.
+A NumPy array has certain attributes: The data type, or `dtype`, represents the data type of each element; the `shape` represents the $$n\times m$$ shape of the array (remember matrices?); the `size` represents the total number of elements; and the number of dimensions, or `ndim`, can show whether the array is 2D, 3D, etc.
 
 Let's list the `dtype`, `shape`, `size`, and `ndim` for `b`.
 
 Some other important functions we'll be using from NumPy include:
-* `exp(x)` raises $e$ to $x$
+* `exp(x)` raises $$e$$ to $$x$$
 * `dot(array1, array2)` calculates the dot product of `array1` and `array2`. This is done by multiplying each row of `array1` by each column of `array2`, as we went over in a previous lecture
 * `T` transposes an array, in effect reflecting it over the diagonal
 
@@ -100,7 +108,7 @@ In the first hidden layer, each neuron will look for an assigned mark. Certain g
 
 The remaining hidden layers will attempt to "assemble" the number. These layers will compile clusters of marks in bigger marks and curbes and, eventually, into loops and lines.
 
-<div style="text-align:center"><img src="https://i.postimg.cc/90HGKDbq/Screen-Shot-2018-10-31-at-11-14-15-PM.png"/ height = "100"></div>
+<div style="text-align:center"><img src="https://i.postimg.cc/90HGKDbq/Screen-Shot-2018-10-31-at-11-14-15-PM.png" height = "100"></div>
 <br/>
 
 Finally, the output layer would take these biggests parts---loops and lines---and return the predicted number. For example, an upper and lower circle could indicate an eight. 
@@ -111,9 +119,10 @@ This is what the neural network would look like in action:
 <br/>
 
 ## Reviewing the Problem
+
 Today, we'll be tackling the XOR problem. The challenge was to design an algorithm that could correctly classify predict the outcome of a XOR gate.
 
-<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/1280px-XOR_ANSI.svg.png"/ height = "100"></div>
+<div style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/1280px-XOR_ANSI.svg.png" height = "100"></div>
 
 The XOR gate is simple. The gate accepts two Boolean inputs, A and B, and only returns true if A is *not* B.
 
@@ -145,7 +154,7 @@ class NeuronLayer():
         self.synaptic_weights = 2 * random.random((number_of_inputs_per_neuron, number_of_neurons)) - 1
 ```
 
-If we print a random example layer---using four neurons and three inputs per neuron---we get the following matrix:
+If we print a random example layer---using four neurons and three inputs per neuron---we get the following matrix. Remember that the weights began randomly, so if we run the above code again we'll get different initial weights:
 
 $$
 \begin{bmatrix}
@@ -166,7 +175,7 @@ class NeuralNetwork():
         self.layer2 = layer2  # This is the output layer
 ```
 
-We'll then create the two functions used for forward- and back-propagation, respectively. The `sigmoid` function creates the S-curve, which we can use to normalize the weights of our neurons to be between 0 and 1. The equation for forward propagation is the same one from the graph above, and the back propagation formula represents the gradient of the forward one (don't worry too much about this):
+We'll then create the two functions used for forward- and back-propagation, respectively. The `sigmoid` function creates the S-curve, which we can use to normalize the weights of our neurons to be between $$0$$ and $$1$$. The equation for forward propagation is the same one from the graph above, and the back propagation formula represents the gradient of the forward one (don't worry too much about this):
 
 ```python
     # Used for forward propagation
@@ -191,7 +200,7 @@ We then write our forward propagation function, where we return the outputs from
 
 Next, we create our training function. For each iteration, we first propagate forward. Then, we find the error between the output from the hidden layer and the actual output and back-propagate to adjust the weights; we then move on to the next iteration:
 
-```python=
+```python
     # Training and backprop
     def train(self, training_set_inputs, training_set_outputs, number_of_training_iterations):
         for iteration in range(number_of_training_iterations):
@@ -217,7 +226,7 @@ Next, we create our training function. For each iteration, we first propagate fo
 
 We then define the shape of our neural network (an instance of the `NeuralNetwork` class) using our layers (instances of the `NeuronLayer` class) and actually create the network to use for training:
 
-```python=
+```python
 input_layer_size = 2
 hidden_layer_size = 3
 output_layer_size = 1
@@ -239,7 +248,7 @@ iterations = 10000 #test 10,000 times to form the network
 
 We've now made the model; what's left is training it. We call the `train` method on `neural_network`
 
-```python=
+```python
 # training
 neural_network.train(training_set_inputs, training_set_outputs, iterations)
 
@@ -265,6 +274,7 @@ We also have a visualization function in the [colab](https://colab.research.goog
 
 #### Reference
 Classes and methods (make sure to include `self` as a parameter in each method!):
+
 * `NeuronLayer` represents each layer of the neural network
     * `__init__` initializes an instance of a layer
 * `NeuralNetwork` represents, well, the neural network
