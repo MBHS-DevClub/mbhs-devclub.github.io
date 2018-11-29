@@ -5,7 +5,7 @@ tags: [tensorflow, image_classification]
 excerpt_separator: <!--more-->
 ---
 
-> Follow along [here](https://colab.research.google.com/drive/1hKoBqCqhvBn2D5T6TzoKxBxCLmBITDY_).
+> Follow along [here](https://colab.research.google.com/drive/1o6-_tz4B1k2tQG39rnrARhb4xMwtIXJx).
 
 ## Introduction
 
@@ -220,7 +220,7 @@ How do we know our model is slightly overfit?
 
 ### Visualizing our Predictions
 
-Check in our [collab notebook](https://colab.research.google.com/drive/1o6-_tz4B1k2tQG39rnrARhb4xMwtIXJx) for the week to see how we can visualize our model predictions.
+Check in our [colab notebook](https://colab.research.google.com/drive/1o6-_tz4B1k2tQG39rnrARhb4xMwtIXJx) for the week to see how we can visualize our model predictions.
 
 ## Closing up shop
 
