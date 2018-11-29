@@ -46,7 +46,7 @@ Our goal is to design a neural network that can classify clothing. Given picture
 
 To train and test our network, we first need a *lot* of labled pictures of clothing. Fortunately, the Fashion MNIST database happens to contain 70,000 labeled pictures of 28 x 28 resolution. You can find it **[here](https://www.kaggle.com/zalando-research/fashionmnist)**.
 
-<div style="text-align:center"><img src="https://tensorflow.org/images/fashion-mnist-sprite.png" height = 500></div>
+<div style="text-align:center"><img src="https://tensorflow.org/images/fashion-mnist-sprite.png"></div>
 
 The images are labeled with numbers from 0 to 9. The labels are assigned as outlined in the table.
 
