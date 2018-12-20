@@ -42,13 +42,9 @@ What is MobileNet?
 
 <img src="https://www.researchgate.net/profile/Gustav_Von_Zitzewitz/publication/324476862/figure/fig7/AS:614545865310213@1523530560584/Winner-results-of-the-ImageNet-large-scale-visual-recognition-challenge-LSVRC-of-the.png" alt="Quote" class="center">
 
-A review of convolutional neural networks:
+A [review](https://www.youtube.com/embed/Gu0MkmynWkw) of convolutional neural networks:
 
-<iframe width="100%" height="500px" class="center" src="https://www.youtube.com/embed/Gu0MkmynWkw">
-
-</iframe>
-
-<br></br>
+<br>
 
 Good sites to mess around with convolutional neural networks and visualize the layers: http://scs.ryerson.ca/~aharley/vis/conv/
 
