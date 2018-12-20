@@ -42,11 +42,11 @@ What is MobileNet?
 
 <img src="https://www.researchgate.net/profile/Gustav_Von_Zitzewitz/publication/324476862/figure/fig7/AS:614545865310213@1523530560584/Winner-results-of-the-ImageNet-large-scale-visual-recognition-challenge-LSVRC-of-the.png" alt="Quote" class="center">
 
-A [review](https://www.youtube.com/embed/Gu0MkmynWkw) of convolutional neural networks:
+Here's a [review](https://www.youtube.com/embed/Gu0MkmynWkw) of convolutional neural networks.
 
 <br>
 
-Good sites to mess around with convolutional neural networks and visualize the layers: http://scs.ryerson.ca/~aharley/vis/conv/
+And here's a [good site](http://scs.ryerson.ca/~aharley/vis/conv/) to mess around with convolutional neural networks and visualize the layers.
 
 ## Transfer Learning Methods
 There are three main that should be used.
