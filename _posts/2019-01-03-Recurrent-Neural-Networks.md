@@ -1,19 +1,15 @@
-```
 ---
 layout: post
 title: Recurrent Neural Networks
 tags: [RNN, ML, text]
 excerpt_separator: <!--more-->
 ---
-```
 
 ## Introduction
 
 So far, we have mostly been working with simple feed-forward neural networks where inputs move through layers sequentially.
 
-```
 <div style="text-align:center"><img src ="https://cxoherald.com/wp-content/uploads/2018/11/Python.gif" /></div>
-```
 
 For our multilayered perceptrons, these layers have been composed of weights, biases, and activation functions. For our convolutional neural networks, we used convolutional and pooling layers.
 
