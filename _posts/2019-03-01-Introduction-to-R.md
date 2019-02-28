@@ -1,4 +1,10 @@
-# R
+---
+layout: post
+title: Introduction to R
+tags: [R, ggplot2]
+excerpt_separator: <!--more-->
+---
+
 ## Introduction
 We've been using cleaned and well-structured data from, for example, the MNIST database to practice and better understand machine learning. But data (plural) don't often come cleaned and ready-to-use; instead, we usually have to compile multiple databases, remove rows, reformat columns, change the database structure---the list goes on. 
 
